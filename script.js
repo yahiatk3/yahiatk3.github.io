@@ -19,11 +19,3 @@ themeToggle.addEventListener('click', () => {
   applyTheme(next);
   try { localStorage.setItem('theme', next); } catch (e) {}
 });
-
-const burger = document.getElementById('navBurger');
-const navLinks = document.querySelector('.nav__links');
-burger.addEventListener('click', () => navLinks.classList.toggle('is-open'));
-
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => navLinks.classList.remove('is-open'));
-});
